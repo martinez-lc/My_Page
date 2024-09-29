@@ -6,46 +6,33 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Curriculum Vitae - Luis Martínez</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
         <header>
+            <div class="profile-pic">
+                <img src="profile.jpg" alt="Luis Martínez">
+            </div>
             <h1>Luis Martínez</h1>
             <p>Ingenieur en Electronique et Télécommunications</p>
         </header>
 
-        <section id="profile" class="profile">
+        <section id="profile" class="fade-in">
             <h2>Profile</h2>
             <p>Ingénieur spécialisé en télématique avec plus de 7 ans d’expérience, dirigeant des équipes et gérant des projets avec une expertise en développement de logiciels mobiles et web.</p>
         </section>
 
-        <section id="contact" class="contact">
-            <h2>Contact</h2>
-            <p>Email: lcdadsa@gmail.com</p>
-            <p>Phone: 012222222</p>
-            <p>Location: Colombie</p>
-        </section>
-
-        <section id="skills" class="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>Leadership, Prise de décision, Négociation et résolution des conflits</li>
-                <li>Technologies IP, PBX, réseau, centres de données</li>
-                <li>Développement logiciel: Java, CSS, JavaScript, HTML, Python</li>
-                <li>Bases de données: MySQL, PostgreSQL</li>
-            </ul>
-        </section>
-
-        <section id="languages" class="languages">
-            <h2>Languages</h2>
-            <ul>
-                <li>Espagnol: Langue maternelle</li>
-                <li>Français: Niveau B1</li>
-                <li>Anglais: Niveau B1</li>
-            </ul>
-        </section>
-
-        <section id="experience" class="experience">
+        <section id="experience" class="fade-in">
             <h2>Professional Experience</h2>
             <div class="job">
                 <h3>Bioinnova Salud Digital IA SAS</h3>
@@ -61,14 +48,41 @@
                     <li>Développement de 2 applications mobiles pour capter l'information.</li>
                 </ul>
             </div>
-            <!-- Add other experiences similarly -->
+            <!-- Add other jobs here -->
+        </section>
+
+        <section id="skills" class="fade-in">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Leadership</h3>
+                    <p>Managing cross-functional teams and resources to deliver projects successfully.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Software Development</h3>
+                    <p>Proficient in Java, CSS, JavaScript, HTML, Python, XML.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Database Management</h3>
+                    <p>Experience with MySQL, PostgreSQL databases.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Languages</h3>
+                    <p>Fluent in Spanish, French (B1), English (B1).</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="fade-in">
+            <h2>Contact</h2>
+            <p><strong>Email:</strong> lcdadsa@gmail.com</p>
+            <p><strong>Phone:</strong> 012222222</p>
+            <p><strong>Location:</strong> Colombie</p>
         </section>
 
         <footer>
             <p>© 2024 Luis Martínez</p>
         </footer>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
