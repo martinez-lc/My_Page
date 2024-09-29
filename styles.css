@@ -1,14 +1,8 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* General Styles */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #1a1a1a; /* Dark background for tech look */
-    color: #eaeaea; /* Light text for contrast */
-    line-height: 1.6;
+    background-color: #1a1a1a;
+    color: #eaeaea;
 }
 
 .container {
@@ -17,43 +11,13 @@ body {
     padding: 20px;
 }
 
-/* Navigation Bar */
-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    background-color: #2c3e50;
-    padding: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px;
-    transition: background-color 0.3s ease;
-}
-
-nav ul li a:hover {
-    background-color: #27ae60; /* Green highlight to represent success/data pipelines */
-    border-radius: 4px;
-}
-
-/* Header with Data Engineer Style */
+/* Header Section */
 header {
-    text-align: center;
-    margin: 40px 0;
-    color: #eaeaea;
-    position: relative;
-    background: url('data-grid-background.jpg') no-repeat center center; /* You can use an abstract data grid image */
+    background: url('data-grid-background.jpg') no-repeat center center;
     background-size: cover;
     padding: 60px;
-    border-radius: 15px;
+    position: relative;
+    color: #fff;
 }
 
 header::before {
@@ -63,122 +27,60 @@ header::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.7); /* Overlay effect */
-    z-index: 1;
+    background: rgba(0, 0, 0, 0.7);
 }
 
 header h1 {
-    position: relative;
     font-size: 3em;
-    color: #27ae60; /* Green, symbolizing efficiency and data flow */
-    z-index: 2;
-}
-
-header p {
-    font-size: 1.2em;
-    z-index: 2;
-    position: relative;
-}
-
-/* Section Titles */
-h2 {
-    font-size: 2.2em;
     color: #27ae60;
-    margin-bottom: 20px;
-    border-left: 5px solid #27ae60;
-    padding-left: 15px;
 }
 
-/* Job & Skills Section */
-section {
-    margin-bottom: 40px;
-}
-
-.job, .skill-card {
-    background-color: #333;
-    padding: 20px;
-    margin-bottom: 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease;
-    position: relative;
-}
-
-.job:hover, .skill-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
-}
-
-/* Skill Cards with Tech Symbols */
+/* Skills Grid */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
 }
 
-.skill-card h3 {
-    font-size: 1.5em;
-    color: #2980b9;
-    margin-bottom: 10px;
-}
-
-.skill-card p {
-    font-size: 1em;
-    line-height: 1.4;
-}
-
-.skill-card::before {
-    content: attr(data-icon);
-    font-family: "FontAwesome"; /* Or a similar icon library */
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    font-size: 2em;
-    color: #27ae60;
-    opacity: 0.2;
-}
-
-/* Add custom icons for each skill card */
-.skill-card[data-icon="&#xf121;"]::before {
-    content: "\f121"; /* Code icon */
-}
-
-.skill-card[data-icon="&#xf1c0;"]::before {
-    content: "\f1c0"; /* Database icon */
-}
-
-.skill-card[data-icon="&#xf0e8;"]::before {
-    content: "\f0e8"; /* Data flow icon */
-}
-
-/* Contact Section */
-#contact p {
-    font-size: 1.1em;
-    color: #bdc3c7;
-}
-
-footer {
-    text-align: center;
-    margin-top: 40px;
+.skill-card {
+    background-color: #333;
     padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Project Cards */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
     background-color: #2c3e50;
-    color: #bdc3c7;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
 }
 
-footer p {
-    font-size: 0.9em;
+.project-card h3 {
+    font-size: 1.5em;
+    color: #27ae60;
 }
 
-/* Animations */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeIn 1s ease forwards;
+.view-details {
+    background-color: #27ae60;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.view-details:hover {
+    background-color: #2ecc71;
 }
