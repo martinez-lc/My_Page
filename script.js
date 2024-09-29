@@ -28,3 +28,14 @@ const observer = new IntersectionObserver((entries) => {
 sections.forEach(section => {
     observer.observe(section);
 });
+
+// Adding dynamic effects for skill cards
+const skillCards = document.querySelectorAll('.skill-card');
+skillCards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        card.classList.add('hover');
+    });
+    card.addEventListener('mouseleave', () => {
+        card.classList.remove('hover');
+    });
+});
