@@ -6,8 +6,9 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: #1a1a1a; /* Dark background for tech look */
+    color: #eaeaea; /* Light text for contrast */
+    line-height: 1.6;
 }
 
 .container {
@@ -16,12 +17,14 @@ body {
     padding: 20px;
 }
 
+/* Navigation Bar */
 nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
     background-color: #2c3e50;
     padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 nav ul li {
@@ -37,62 +40,121 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #34495e;
+    background-color: #27ae60; /* Green highlight to represent success/data pipelines */
     border-radius: 4px;
 }
 
+/* Header with Data Engineer Style */
 header {
     text-align: center;
     margin: 40px 0;
+    color: #eaeaea;
+    position: relative;
+    background: url('data-grid-background.jpg') no-repeat center center; /* You can use an abstract data grid image */
+    background-size: cover;
+    padding: 60px;
+    border-radius: 15px;
 }
 
-.profile-pic img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 4px solid #2c3e50;
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); /* Overlay effect */
+    z-index: 1;
 }
 
-h1 {
-    font-size: 2.5em;
-    color: #2c3e50;
-    margin-top: 10px;
+header h1 {
+    position: relative;
+    font-size: 3em;
+    color: #27ae60; /* Green, symbolizing efficiency and data flow */
+    z-index: 2;
 }
 
+header p {
+    font-size: 1.2em;
+    z-index: 2;
+    position: relative;
+}
+
+/* Section Titles */
 h2 {
-    font-size: 2em;
-    color: #2980b9;
+    font-size: 2.2em;
+    color: #27ae60;
     margin-bottom: 20px;
+    border-left: 5px solid #27ae60;
+    padding-left: 15px;
 }
 
+/* Job & Skills Section */
 section {
     margin-bottom: 40px;
 }
 
-.job {
-    background-color: #ecf0f1;
+.job, .skill-card {
+    background-color: #333;
     padding: 20px;
     margin-bottom: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    position: relative;
 }
 
+.job:hover, .skill-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Skill Cards with Tech Symbols */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
 }
 
-.skill-card {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+.skill-card h3 {
+    font-size: 1.5em;
+    color: #2980b9;
+    margin-bottom: 10px;
 }
 
-.skill-card:hover {
-    transform: translateY(-10px);
+.skill-card p {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+.skill-card::before {
+    content: attr(data-icon);
+    font-family: "FontAwesome"; /* Or a similar icon library */
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 2em;
+    color: #27ae60;
+    opacity: 0.2;
+}
+
+/* Add custom icons for each skill card */
+.skill-card[data-icon="&#xf121;"]::before {
+    content: "\f121"; /* Code icon */
+}
+
+.skill-card[data-icon="&#xf1c0;"]::before {
+    content: "\f1c0"; /* Database icon */
+}
+
+.skill-card[data-icon="&#xf0e8;"]::before {
+    content: "\f0e8"; /* Data flow icon */
+}
+
+/* Contact Section */
+#contact p {
+    font-size: 1.1em;
+    color: #bdc3c7;
 }
 
 footer {
@@ -100,10 +162,14 @@ footer {
     margin-top: 40px;
     padding: 20px;
     background-color: #2c3e50;
-    color: #fff;
+    color: #bdc3c7;
 }
 
-/* Animation */
+footer p {
+    font-size: 0.9em;
+}
+
+/* Animations */
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
