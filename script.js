@@ -1,4 +1,4 @@
-// Smooth scroll for navigation links
+// Smooth scroll for navigation
 document.querySelectorAll('nav ul li a').forEach(link => {
     link.addEventListener('click', function(e) {
         e.preventDefault();
@@ -11,31 +11,34 @@ document.querySelectorAll('nav ul li a').forEach(link => {
     });
 });
 
-// Fade-in effect for sections as the user scrolls
-const sections = document.querySelectorAll('.fade-in');
-const options = {
-    threshold: 0.5
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('fade-in-visible');
+// Chart.js Example - Visualize Skills
+window.onload = function() {
+    const ctx = document.getElementById('skillsChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['JavaScript', 'Python', 'SQL', 'Java', 'Hadoop'],
+            datasets: [{
+                label: 'Skill Proficiency (%)',
+                data: [90, 85, 80, 70, 75],
+                backgroundColor: [
+                    '#3498db', '#2ecc71', '#e74c3c', '#9b59b6', '#f39c12'
+                ]
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
         }
     });
-}, options);
+};
 
-sections.forEach(section => {
-    observer.observe(section);
-});
-
-// Adding dynamic effects for skill cards
-const skillCards = document.querySelectorAll('.skill-card');
-skillCards.forEach(card => {
-    card.addEventListener('mouseenter', () => {
-        card.classList.add('hover');
-    });
-    card.addEventListener('mouseleave', () => {
-        card.classList.remove('hover');
+// Show project details in a modal or expanding div (basic example)
+document.querySelectorAll('.view-details').forEach(button => {
+    button.addEventListener('click', function() {
+        alert('Here are the details for this project...');
     });
 });
