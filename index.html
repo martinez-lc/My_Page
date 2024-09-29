@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Curriculum Vitae - Luis Martínez</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -15,6 +16,7 @@
                 <li><a href="#profile">Profile</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -24,60 +26,66 @@
                 <img src="profile.jpg" alt="Luis Martínez">
             </div>
             <h1>Luis Martínez</h1>
-            <p>Ingenieur en Electronique et Télécommunications</p>
+            <p>Data Engineer & Software Developer</p>
         </header>
 
+        <!-- Profile Section -->
         <section id="profile" class="fade-in">
             <h2>Profile</h2>
-            <p>Ingénieur spécialisé en télématique avec plus de 7 ans d’expérience, dirigeant des équipes et gérant des projets avec une expertise en développement de logiciels mobiles et web.</p>
+            <p>Specialized Data Engineer with over 7 years of experience in managing data architectures, developing software, and ensuring smooth data pipelines. Extensive experience in building scalable infrastructures for data processing and storage.</p>
         </section>
 
+        <!-- Experience Section -->
         <section id="experience" class="fade-in">
             <h2>Professional Experience</h2>
             <div class="job">
                 <h3>Bioinnova Salud Digital IA SAS</h3>
                 <p><strong>May - Aug 2022 (Colombia, remote)</strong></p>
                 <ul>
-                    <li>Soutien à la recherche pour l'entrepreneuriat dans la science des données et l'IA pour la santé.</li>
+                    <li>Research and entrepreneurship support in data science and AI for healthcare.</li>
                 </ul>
             </div>
-            <div class="job">
-                <h3>Freelance - AppSheet</h3>
-                <p><strong>May - July 2022 (Colombia, remote)</strong></p>
-                <ul>
-                    <li>Développement de 2 applications mobiles pour capter l'information.</li>
-                </ul>
-            </div>
-            <!-- Add other jobs here -->
+            <!-- More experience sections here -->
         </section>
 
+        <!-- Skills Section -->
         <section id="skills" class="fade-in">
             <h2>Skills</h2>
             <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>Leadership</h3>
-                    <p>Managing cross-functional teams and resources to deliver projects successfully.</p>
-                </div>
-                <div class="skill-card">
+                <div class="skill-card" data-icon="&#xf121;">
                     <h3>Software Development</h3>
-                    <p>Proficient in Java, CSS, JavaScript, HTML, Python, XML.</p>
+                    <p>Proficient in Java, CSS, JavaScript, Python, and XML. Developed scalable solutions for data platforms.</p>
                 </div>
-                <div class="skill-card">
+                <div class="skill-card" data-icon="&#xf1c0;">
                     <h3>Database Management</h3>
-                    <p>Experience with MySQL, PostgreSQL databases.</p>
+                    <p>Experience with relational databases (MySQL, PostgreSQL) and NoSQL databases (MongoDB).</p>
                 </div>
-                <div class="skill-card">
-                    <h3>Languages</h3>
-                    <p>Fluent in Spanish, French (B1), English (B1).</p>
+                <div class="skill-card" data-icon="&#xf0e8;">
+                    <h3>Data Engineering</h3>
+                    <p>Skilled in building data pipelines, ETL processes, and managing big data infrastructures using Spark, Hadoop.</p>
                 </div>
             </div>
         </section>
 
+        <!-- New Projects Section -->
+        <section id="projects" class="fade-in">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Data Pipeline for Insurance Company</h3>
+                    <p>Built a real-time data pipeline using Apache Kafka and Spark for processing insurance data.</p>
+                    <button class="view-details">View Details</button>
+                </div>
+                <!-- More projects here -->
+            </div>
+        </section>
+
+        <!-- Contact Section -->
         <section id="contact" class="fade-in">
             <h2>Contact</h2>
             <p><strong>Email:</strong> lcdadsa@gmail.com</p>
             <p><strong>Phone:</strong> 012222222</p>
-            <p><strong>Location:</strong> Colombie</p>
+            <p><strong>Location:</strong> Colombia</p>
         </section>
 
         <footer>
